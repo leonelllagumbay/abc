@@ -3,5 +3,6 @@ export const appInitialState = {
     authenticated: false,
     token: null,
     ava: {},
+    loading: false
   },
 };

@@ -7,6 +7,16 @@ const semiGlobalReducer = (state, action) => {
           authenticated: true
         }
       }
+    case 'LOADING_ON':
+      return {...state, data: {
+        loading: true
+      }
+    }
+    case 'LOADING_OFF':
+      return {...state, data: {
+        loading: false
+      }
+    }
     default:
       return state;
   }

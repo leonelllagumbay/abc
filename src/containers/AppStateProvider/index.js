@@ -11,7 +11,9 @@ const AppStateProvider = ({ children }) => {
   // value is [state, dispatch]
   const value = useReducer(semiGlobalReducer, appInitialState);
 
-  return <Context.Provider value={value}>{children}</Context.Provider>;
+  return <Context.Provider value={value}>
+    {children}
+  </Context.Provider>;
 }
 
 AppStateProvider.propTypes = {

@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { AppStateProvider } from "./containers/AppStateProvider";
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <AppStateProvider>
-      <App />
+      <BrowserRouter basename={basename}>
+        <App />
+      </BrowserRouter>
     </AppStateProvider>
   </React.StrictMode>,
   document.getElementById("root")
