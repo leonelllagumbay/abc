@@ -35,9 +35,9 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }} # Set this in repository secrets
-  REGION: ${{ secrets.GCP_REGION }} # Set this in repository secrets
-  SERVICE: ${{ secrets.GCP_SERVICE_NAME }} # Set this in repository secrets
+  PROJECT_ID: 'personal-spavi' # TODO: update to your Google Cloud project ID
+  REGION: 'asia-southeast1' # TODO: update to your region
+  SERVICE: 'onel-bootcamp' # TODO: update to your service name
 
 jobs:
   deploy:
