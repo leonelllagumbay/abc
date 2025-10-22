@@ -40,7 +40,7 @@ env:
   SERVICE: 'onel-bootcamp' # TODO: update to your service name
 
 jobs:
-  deploy:
+  bootcamp-deploy:
     runs-on: 'ubuntu-latest'
 
     permissions:
