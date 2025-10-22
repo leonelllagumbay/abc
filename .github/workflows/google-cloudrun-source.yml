@@ -51,6 +51,31 @@ jobs:
       - name: 'Checkout'
         uses: 'actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332' # actions/checkout@v4
 
+      # Install package, build source, and test your application here
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'  # Change to your desired Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Lint
+        run: npm run lint 
+
+      - name: Run tests
+        run: npm run test  # Adjust this command based on your test setup
+
+      # Coverage reporting
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: lcov-report/index.htmlo  # Adjust this path if necessary
+
+      - name: Build the application
+        run: npm run build
+
       # Configure Workload Identity Federation and generate an access token.
       #
       # See https://github.com/google-github-actions/auth for more options,
