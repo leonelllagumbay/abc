@@ -71,7 +71,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: lcov-report/index.html  # Adjust this path if necessary
+          path: coverage/lcov-report/index.html  # Adjust this path if necessary
 
       - name: Build the application
         run: npm run build
