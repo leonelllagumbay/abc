@@ -102,6 +102,6 @@ jobs:
           source: './'
 
       # If required, use the Cloud Run URL output in later steps
-      - name: 'Show output'
+      - name: 'Display output'
         run: |-
           echo ${{ steps.deploy.outputs.url }}
